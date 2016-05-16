@@ -1,3 +1,4 @@
+package NYStyle;
 
 public class SimplePizzaFactory {
 	public Pizza createPizza(String type){
