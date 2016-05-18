@@ -3,7 +3,7 @@ public class ChocolateBoiler {
 	private boolean empty;
 	private boolean boiled;
 	
-	private static ChocolateBoiler uniqueInstance;
+	private static ChocolateBoiler uniqueInstance = new ChocolateBoiler();
 	
 	private ChocolateBoiler() {
 		// TODO Auto-generated constructor stub
@@ -11,10 +11,8 @@ public class ChocolateBoiler {
 		boiled = false;
 	}
 	
-	public static synchronized ChocolateBoiler getInstance(){
-		if(uniqueInstance == null){
-			uniqueInstance = new ChocolateBoiler();
-		}
+	public static ChocolateBoiler getInstance(){
+		
 		return uniqueInstance;
 	}
 	
