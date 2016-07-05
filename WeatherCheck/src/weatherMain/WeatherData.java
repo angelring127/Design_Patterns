@@ -3,7 +3,11 @@ package weatherMain;
 import java.util.ArrayList;
 
 public class WeatherData implements Subject{
-	
+	/*
+	 * 기상 관측값이
+	 * 갱신될 떄마다
+	 * 알려주기 위한 메소드
+	 */
 	private ArrayList<Observer> observers;
 	private float temperature;
 	private float humidity;
@@ -15,11 +19,7 @@ public class WeatherData implements Subject{
 	float getTemperature() {return 0;}
 	float getHumidity() {return 0;}
 	float getPressure() {return 0;}
-	/*
-	 * 기상 관측값이
-	 * 갱신될 떄마다
-	 * 알려주기 위한 메소드
-	 */
+	
 	void measurementsChanged(){
 		// 기상 스테이션으로부터 갱신된 측정치를 받으면 옵저버들한테 알립니다.
 		notifyObserver();
