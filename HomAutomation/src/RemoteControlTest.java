@@ -1,13 +1,13 @@
 
 public class RemoteControlTest {
 	public static void main(String[] args) {
-		SimpleRemoteControl remote = new SimpleRemoteControl();
-		Light light = new Light();
-		LightOnCommand lightOn = new LightOnCommand(light);
+			SimpleRemoteControl srControl = new SimpleRemoteControl();//웨이트리스
+			Light light = new Light();
+			LightOnCommand lightOnCmd = new LightOnCommand(light);//주문서
 		
-		remote.setCommand(lightOn);
-		remote.buttonWasPressed();
-		remote.buttonWasPressed();
+			srControl.setCommand(lightOnCmd);//takeOrder()
+			srControl.buttonWasPressed();
+		
 	
 	}
 }
