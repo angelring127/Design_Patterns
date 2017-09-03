@@ -2,16 +2,24 @@ package Display;
 
 public class ForecastDisplay implements Observer,DisplayElement{
 	
+	private float temp;
+	private float humidity;
+	private float pressure;
+	
 	@Override
 	public void display() {
 		// TODO Auto-generated method stub
-		//화면 출력
+		
 	}
 	
 	@Override
-	public void update() {
+	public void update(float temp, float humidity, float pressure) {
 		// TODO Auto-generated method stub
-		// 업데이트시 값 변환
+		this.temp = temp;
+		this.humidity = humidity;
+		this.pressure = pressure;
+		
+		display();
 	}
 
 }
